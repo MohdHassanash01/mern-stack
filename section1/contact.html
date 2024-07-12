@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+
+}
+
+.page1{
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/611/154/459/widescreen-high-resolution-nature-hd-1920x1080-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 70vw;
+    height: 70vh;
+    background-color: #fff;
+    
+    display: flex;
+   border-radius: 20px;
+   opacity:initial;
+
+
+}
+
+
+.right{
+    width: 50%;
+    height: 100%;
+    background: rgb(7,56,152);
+    background: linear-gradient(90deg, rgba(7,56,152,1) 0%, rgba(9,9,121,1) 0%, rgba(5,103,183,1) 35%, rgba(12,154,206,1) 75%, rgba(16,185,219,1) 100%);
+}
+
+
+.left{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(255, 254, 254);
+   padding: 30px;
+   border-radius: 20px;
+   
+}
+
+
+.heading{
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+h3{
+    padding-top: 35px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.para{
+    padding-top: 10px;
+    color: #5a5252;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+span{
+    color: #5a5252;
+}
+
+.new{
+   
+   padding-top: 5px;
+   font-weight: 300;
+
+  
+}
+
+input{
+    background-color: transparent;
+   text-align: center;
+    border-color: aliceblue;
+    height: 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 800;
+}
+
+.right{
+    color: #fff;
+   padding: 30px;
+   border-bottom-right-radius: 20px; 
+   border-top-right-radius: 20px; 
+
+}
+
+.right > h1{
+text-align: center;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 10px;
+   
+    border-radius: 20px;
+}
+
+label{
+    font-size: 18px;
+   
+}
+
+button{
+    font-size: 18px;
+    border-radius: 5px;
+ padding: 3px 10px;
+ margin-top: 15px;
+ color: white;
+ background-color: transparent;
+    border-color: white;
+    border: 3px solid ;
+}
+
+
+button:hover{
+    background-color: rgb(182, 12, 46);
+}
+
+.right > h1:hover{
+    color: black;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+
+        <div class="page1">
+<div class="container">
+    <div class="right">
+        <h1>Send us a Message</h1>
+
+<div class="contact">
+    <label for="name">Name</label>
+    <br>
+    <input type="text" id="name">
+<br>
+    <label for="email">Email</label>
+    <br>
+    <input type="email" id="email">
+
+    <br>
+
+    <label for="subject">Subject</label>
+    <br>
+    <input type="text" id="name">
+
+    <br>
+
+    <label for="message">Message</label>
+    <br>
+    <input type="text" id="message">
+
+    <button>Submit</button>
+</div>
+    </div>
+    <div class="left">
+        <h1 class="heading">Contact Us</h1>
+
+        <h3 class="para">we are open for any suggestion or just to have a chat</h3>
+
+
+       <div class="add">
+        <h3> <strong>Address:</strong> <span>
+            198 West 21th Street, Suite 721 <br>
+            <h4 class="new">  New York NY 10016</h4>
+          
+        </span></h3>
+    
+            <h3><strong>Phone:</strong> &nbsp;<span>+123456678</span></h3>
+    
+            <h3><strong>Email:</strong>&nbsp;
+                <span> info@yoursite.com</span></h3>
+    
+            <h3><strong>Website:</strong> &nbsp;<span>yoursite.com</span></h3>
+       </div>
+    </div>
+</div>
+        </div>
+    
+    
+</body>
+</html>
