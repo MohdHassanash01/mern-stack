@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        .hero-section{
+            border: 2px solid red;
+            height: 40vh;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url("https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg");
+            background-size: cover;
+            background-position: bottom;
+            color: rgb(0, 0, 0);
+            color: white;
+
+        }
+        .hero-title{
+            font-size: 60px;
+}
+
+.hero-description{
+    font-size: 20px;
+}
+.hero-btn{
+    background-color: white;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: 2px solid black;
+}
+.feature-section{
+   
+    width:80%;
+    margin: auto;
+}
+.card{
+    /* border: 2px solid red; */
+    text-align: center;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 2px 2px 10px #0f0f0f;
+    padding: 40px 20px;
+}
+.card-container{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    /* flex-direction: column; */
+    padding-top:40px ;
+}
+
+.service-section{
+    width: 80%;
+    margin: 50px auto;
+/* height: 50vh; */
+/* border: 2px solid; */
+
+
+}
+
+.row{
+    display: grid;
+grid-template-columns:1fr 1fr;
+}
+
+.service-image{
+    /* background-image: url(""); */
+    /* border: 2px solid red; */
+}
+
+.service-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.service-info{
+    padding: 40px;
+    /* border: 2px solid; */
+    text-align: center;
+
+
+}
+
+.service-title{
+    font-size: 20px;
+}
+
+.service-feature{
+    list-style: none;
+    padding:0 ;
+    text-align: center;
+
+   
+}
+
+.service-feature li {
+    font-size: 20px;
+    margin: 20px 0px;
+    text-align: center;
+}
+
+
+footer{
+    background-color: rgb(72, 70, 70);
+    color: white;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 5fr 2fr 2fr ;
+}
+
+
+.main-links a,
+.page-links a,
+.social-links a
+{
+color: white;
+display: block;
+margin-bottom: 10px;
+text-decoration: none;
+font-size: 1.1em;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <article>
+            <section class="hero-section">
+                <h1 class="hero-title">Website Title</h1>
+                <p class="hero-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odio quaerat magni consequatur magnam facere, tempora nesciunt doloribus eligendi perferendis.</p>
+                <button class="hero-btn">Learn More</button>
+
+            </section>
+            <section class="feature-section">
+                 <div class="card-container">
+                    <div class="card">
+                      
+                       
+                        <i class="fa-solid fa-rocket" style="font-size: 35px; color: red;"></i>
+
+                        <h3>Card Title 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis pariatur quia consectetur a excepturi sit odit dicta aperiam, earum dignissimos voluptas aspernatur ratione vero repudiandae suscipit! Quia, soluta.</p>
+
+                    </div>
+                    <div class="card">
+                      
+                        <i class="fa-solid fa-rocket" style="font-size: 35px; color: red;"></i>
+                        
+                        <h3>Card Title 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis pariatur quia consectetur a excepturi sit odit dicta aperiam, earum dignissimos voluptas aspernatur ratione vero repudiandae suscipit! Quia, soluta.</p>
+
+                    </div>
+                    <div class="card">
+                      
+                        <i class="fa-solid fa-rocket" style="font-size: 35px; color: red;"></i>
+                        <h3>Card Title 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis pariatur quia consectetur a excepturi sit odit dicta aperiam, earum dignissimos voluptas aspernatur ratione vero repudiandae suscipit! Quia, soluta.</p>
+
+                    </div>
+
+                </div>
+            </section>
+            <section class="service-section
+            ">
+            <div class="row">
+
+               <div class="service-image">
+                  <img src="./undraw_Services_re_hu5n.png" alt="" >
+               </div>
+
+              <div class="service-info">
+<h2>service TItle</h2>
+
+<ul class="service-feature">
+    <li class="service-title">
+        <i class="fa-solid fa-circle-check"></i>
+        service feature 1
+    </li>
+
+    <li class="service-title">
+        <i class="fa-solid fa-circle-check"></i>
+        service feature 2
+    </li>
+
+    <li class="service-title">
+        <i class="fa-solid fa-circle-check"></i>
+        service feature 3
+    </li>
+
+    <li class="service-title">
+        <i class="fa-solid fa-circle-check"></i>
+        service feature 4
+    </li>
+   
+</ul>
+
+<button style="background-color: red; color: white; font-size: 20px; font-weight: 700; border: none; border-radius: 10px; padding:0px 15px;">Click</button>
+              </div>
+            </div>
+
+
+            <div class="row">
+
+    
+ 
+               <div class="service-info">
+ <h2 >service TItle</h2>
+ 
+ <ul class="service-feature" >
+     <li class="service-title">
+         <i class="fa-solid fa-circle-check"></i>
+         service feature 1
+     </li>
+ 
+     <li class="service-title">
+         <i class="fa-solid fa-circle-check"></i>
+         service feature 2
+     </li>
+ 
+     <li class="service-title">
+         <i class="fa-solid fa-circle-check"></i>
+         service feature 3
+     </li>
+ 
+     <li class="service-title">
+         <i class="fa-solid fa-circle-check"></i>
+         service feature 4
+     </li>
+    
+ </ul>
+
+ <button style="background-color: rgb(10, 220, 244); color: white; font-size: 20px; font-weight: 700; border: none; border-radius: 10px; padding:0px 15px; ">Click</button>
+               </div>
+
+               <div class="service-image">
+                <img src="./computer.png" alt="" >
+             </div>
+             </div>
+
+            </section>
+        </article>
+    </main>
+
+
+
+
+    <footer>
+        <div class="main-links">
+            <h3>Company name</h3>
+            <p>&copy; 2024 , All Right service</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore distinctio fugiat inventore, nam rem laudantium dolor provident? Illo iste beatae, distinctio ipsum sapiente error maiores molestiae impedit quos quia facere?</p>
+          
+        </div>
+<div class="page-links">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+     <a href="#">Link 3</a>
+      <a href="#">Link 4</a>
+</div>
+        <div class="social-links">
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i> facebook
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+
+
+            <a href="#">
+                <i class="fa-brands fa-linkedin"></i> Linkedin
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-github"></i> Github
+            </a>
+        </div>
+
+    </footer>
+</body>
+</html>
