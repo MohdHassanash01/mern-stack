@@ -73,7 +73,7 @@
 function addNum(a,b){
     return a+b
 }
-console.log('the sum of a and b is',addNum(12,13));
+// console.log('the sum of a and b is',addNum(12,13));
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -82,12 +82,11 @@ let getFullname = function(first, last){
     return first + " "+ last
 }
 
-console.log(getFullname('hassan',"ashraf"));
+// console.log(getFullname('hassan',"ashraf"));
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // Arrow function 
-
 
 
 let add1 = (x,y) => x+y
@@ -99,7 +98,18 @@ let multiple = (x) => {
     return x*10
 }
 
-console.log(add1(12,13));
-console.log(square(12));
-console.log(multiple(12));
+// console.log(add1(12,13));
+// console.log(square(12));
+// console.log(multiple(12));
 
+let    sum = 0
+function sumall(a,b){
+
+    for (let i = a; i <= b; i++) {
+       sum +=i   
+    }
+return sum
+
+}
+
+console.log(sumall(1,5));
