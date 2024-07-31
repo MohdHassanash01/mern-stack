@@ -44,7 +44,7 @@ const Navbar = () => {
         <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5">
 
           <Link
-            className={"font-medium  text-gray-600 hover:text-gray-400" + ( path === '/' ? 'border-gray-800' : 'border-transparent' )}
+            className={"font-medium  text-gray-600 hover:text-gray-400 " + (path === '/' ? 'border-neutral-800 text-nutral-200' : 'border-transparent text-neutral-500' )}
             href="/contact"
            
           >
