@@ -16,6 +16,7 @@ const Navbar = () => {
       >
         my react app
       </Link>
+      
       <div className="sm:order-3 flex items-center gap-x-2">
         <button
           type="button"

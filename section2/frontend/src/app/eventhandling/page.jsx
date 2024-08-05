@@ -39,9 +39,9 @@ onMouseDown={(e) => {
     e.target.style.height = '46px'
     e.target.style.width = '46px'}}
 
-    onClick={e => {
-      document.style.backgroundColor = e.style.backgroundColor = red
-    }}
+    // onClick={e => {
+    //   document.style.backgroundColor = e.style.backgroundColor = red
+    // }}
 
  id='circle' className='absolute duration-100 rounded-full size-11 border shadow-lg border-black'></div>
 
