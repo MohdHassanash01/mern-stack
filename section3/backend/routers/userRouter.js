@@ -2,6 +2,8 @@ const express = require('express');
 const Model = require('../models/usermodels');
 const { model } = require('mongoose');
 const router = express.Router()
+const jwt = require("jsonwebtoken")
+require('dotenv').config();
 
 router.post('/add',(req,res) =>{
     // res.send("response from add user")
@@ -11,7 +13,13 @@ router.post('/add',(req,res) =>{
         res.status(200).json(result)
     }).catch((err) => {
         console.log(err);
-        res.status(500).json(err)
+        if (err.code == 11000) {
+        res.status(500).json({message:"Email already exists"})
+            
+        }else{
+            res.status(500).json({message:"Something went wrong"})
+
+        }
         
     });
 })
@@ -80,27 +88,69 @@ router.delete('/delete/:id',(req,res) =>{
 })
 
 
-
 // Update user by ID
-router.put('/update/:id', (req, res) => {
-    const updateData = req.body; // Data to update from the request body
+// router.put('/update/:id', (req, res) => {
+//     const updateData = req.body; // Data to update from the request body
 
-    Model.findByIdAndUpdate(req.params.id, updateData, { new: true, runValidators: true })
-        .then((updatedUser) => {
-            if (updatedUser) {
-                res.status(200).json(updatedUser);
-            } else {
-                res.status(404).json({ message: 'User not found' });
+//     Model.findByIdAndUpdate(req.params.id, updateData, { new: true, runValidators: true })
+//         .then((updatedUser) => {
+//             if (updatedUser) {
+//                 res.status(200).json(updatedUser);
+//             } else {
+//                 res.status(404).json({ message: 'User not found' });
+//             }
+//         })
+//         .catch((err) => {
+//             console.error(err);
+//             res.status(500).json({ error: 'An error occurred while updating the user' });
+//         });
+// });
+
+
+router.put("/update/:id",(req,res) => {
+    Model.findByIdAndUpdate(req.params.id , req.body)
+    .then((result) => {
+        res.status(200).json(result)
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json(err)
+        
+    })
+})
+
+
+
+router.post('/authenticate',(req,res) => {
+    Model.findOne(res.body)
+    .then((result) => {
+        if (result) {
+            // generate token
+            const {_id, name, email, password} = result;
+
+        const payload = {_id, name,email,password}        
+        jwt.sign(
+            payload,
+            process.env.JWT_SECRET,
+            {expiresIn:3600},
+            (err,token) => {
+                if (err) {
+                    console.log(err);
+                    res.status(500).json(err)
+                }else{
+                    res.status(200).json({token})
+                }
             }
-        })
-        .catch((err) => {
-            console.error(err);
-            res.status(500).json({ error: 'An error occurred while updating the user' });
-        });
-});
-
-
-
+        )
+        }else{
+            res.status(401).json({message:"Invalid credentials"})
+        }
+    })
+    .catch((err) => {
+        console.log(err);
+        res.status(500).json(err)
+        
+    })
+})
 
 
 
